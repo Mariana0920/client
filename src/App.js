@@ -8,7 +8,8 @@ function App() {
   useEffect(() => {
     async function getCupoane() {
       try {
-        const response = await axios.get('/api/cupoane');
+        const response = await axios.get('http://localhost:3000/api/cupoane');
+
         setCupoane(response.data);
       } catch (error) {
         console.error('Eroare la obținerea cupoanelor:', error);
